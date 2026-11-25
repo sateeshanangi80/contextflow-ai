@@ -14,8 +14,11 @@ def health():
   }
 
 app.add_middleware(
-  CORSMiddleware,
-  allow_origins=["http://localhost:3000"],
-  allow_methods=["*"],
-  allow_headers=["*"]
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:3000",
+        "https://contextflow-ai-app.vercel.app"
+    ],
+    allow_methods=["*"],
+    allow_headers=["*"]
 )
